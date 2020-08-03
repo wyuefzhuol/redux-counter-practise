@@ -29,6 +29,7 @@ export function CounterGroup() {
     </label><br />
     {
       initArray.map(key => <Counter key={key} 
+        groupSize={actualGroupSize} 
         handleIncrease={()=>dispatch(handleIncrease())} 
         handleDecrease={()=>dispatch(handleDecrease())} 
         handleIncreaseTen={()=>dispatch(handleIncreaseTen())} 

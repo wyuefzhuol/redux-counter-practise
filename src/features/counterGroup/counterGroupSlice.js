@@ -9,6 +9,7 @@ export const counterGroupSlice = createSlice({
   reducers: {
     handleResize: (state, action) => {
       state.size = action.payload
+      state.totalNumber = 0
     },
 
     handleIncrease: state => {
