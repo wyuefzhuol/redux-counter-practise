@@ -24,7 +24,7 @@ class Counter extends React.Component {
     // }
 
     handleMakeZero = () => {
-        //this.props.handleMakeZero(this.state.value);
+        this.props.handleMakeZero(this.state.value);
         this.setState((prevState) => ({
             value: 0
         }));
@@ -34,7 +34,7 @@ class Counter extends React.Component {
         this.setState((prevState) => ({
             value: prevState.value + 1
         }));
-        //this.props.handleIncrease();
+        this.props.handleIncrease();
     }
 
     handleDecrease = () => {
@@ -42,7 +42,7 @@ class Counter extends React.Component {
             this.setState((prevState) => ({
                 value: prevState.value - 1
             }));
-            //this.props.handleDecrease();
+            this.props.handleDecrease();
         }
     }
 
@@ -50,7 +50,8 @@ class Counter extends React.Component {
         this.setState((prevState) => ({
             value: prevState.value + 10
         }));
-        //this.props.handleIncreaseTen();
+        console.log(this.props)
+        this.props.handleIncreaseTen();
     }
 
     render() {

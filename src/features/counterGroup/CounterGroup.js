@@ -5,6 +5,10 @@ import {
   handleResize,
   groupSize,
   totalNumber,
+  handleIncrease,
+  handleDecrease,
+  handleIncreaseTen,
+  handleMakeZero,
 } from './counterGroupSlice'
 
 export function CounterGroup() {
@@ -24,6 +28,10 @@ export function CounterGroup() {
       {actualTotalNumber}
     </label><br />
     {
-      initArray.map(key => <Counter key={key}/>)
+      initArray.map(key => <Counter key={key} 
+        handleIncrease={()=>dispatch(handleIncrease())} 
+        handleDecrease={()=>dispatch(handleDecrease())} 
+        handleIncreaseTen={()=>dispatch(handleIncreaseTen())} 
+        handleMakeZero={e=>dispatch(handleMakeZero(e))} />)
     }</div>);
 }
