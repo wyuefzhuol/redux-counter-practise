@@ -17,4 +17,6 @@ export const { handleResize } = counterGroupSlice.actions;
 
 export const groupSize = state => state.counterGroup.size;
 
+export const totalNumber = state => state.counterGroup.totalNumber;
+
 export default counterGroupSlice.reducer;
